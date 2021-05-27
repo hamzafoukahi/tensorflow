@@ -9,12 +9,14 @@ import { GE } from './fingere-gesture';
 
 const GestureMap = {
   thumbs_up: 'ok',
-  victory: 'two',
+  two_fingers: 'two',
   one_finger: 'one',
+  three_fingers: 'three',
+  four_fingers: 'four',
   stop: 'stop',
 };
 
-type Gesture = 'one' | 'two' | 'ok' | 'stop' | 'none';
+type Gesture = 'one' | 'two' | 'three'| 'four'| 'ok' | 'stop' | 'none';
 type Direction = 'left' | 'right' | 'none';
 type Size = [number, number];
 type Point = [number, number];
@@ -91,12 +93,12 @@ export class HandGesture {
   private _processGesture(landmarks: any): void {
     const { gestures } = GE.estimate(landmarks, 8) || [];
     let gesture = null;
-    for (const g of gestures) {
-      if (g.name === 'victory' || g.name === 'thumbs_up') {
-        gesture = g.name;
-        break;
-      }
-    }
+    // for (const g of gestures) {
+    //   if (g.name === 'victory' || g.name === 'thumbs_up') {
+    //     gesture = g.name;
+    //     break;
+    //   }
+    // }
 
     // console.log("gesture avant if : " + gesture)
     // console.log("!gesture avant if : " + !gesture)
@@ -113,11 +115,11 @@ export class HandGesture {
       }
     }
 
-    if (!gesture && gestures.length) {
-      gesture = 'one_finger';
-      // console.log("apres if : " + gesture)
+    // if (!gesture && gestures.length) {
+    //   gesture = 'one_finger';
+    //   // console.log("apres if : " + gesture)
 
-    }
+    // }
     if (this._lastGesture !== gesture) {
       this._lastGesture = gesture;
       this._lastGestureTiemstamp = Date.now();

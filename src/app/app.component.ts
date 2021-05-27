@@ -25,14 +25,20 @@ export class AppComponent implements AfterViewInit {
   // );
   //-------
   selection$ = this._recognizer.gesture$.pipe(
-    filter((value) => value === 'one' || value === 'two' || value === 'stop' ),
+    filter((value) => value === 'one' || value === 'two' || value === 'three' || value === 'four' || value === 'stop' ),
     map((value) => {
-		if(value === 'stop'){
+		if(value === 'one'){
 			return 'home';
 		} if(value === 'two') {
-			return 'down';
+			return 'about';
 		}
-    if(value === 'one'){
+    if(value === 'three'){
+      return 'three';
+    }   
+    if(value === 'four'){
+      return 'four';
+    }   
+    if(value === 'stop'){
       return 'stop';
     }    
 		           }

@@ -2,24 +2,31 @@
   <mat-drawer #drawer [opened]="opened$ | async">
     <section>
       <a [class.focus]="(selection$ | async) === 'home'" #home routerLink="home"
-        >Home</a
+        >One Finger</a
       >
 
-      <a [class.focus]="(selection$ | async) === 'down'" #down routerLink="down"
-        >down</a
+      <a [class.focus]="(selection$ | async) === 'about'" #down routerLink="about"
+        >Victory</a
       >
 
-      <a [class.focus]="(selection$ | async) === 'stop'" #stop routerLink="stop"
-      >stop</a
+      <a [class.focus]="(selection$ | async) === 'three'" #stop routerLink="three"
+      >Three Fingers</a
     >
+    <a [class.focus]="(selection$ | async) === 'four'" #stop routerLink="four"
+      >Four Fingers</a
+    >
+    <a [class.focus]="(selection$ | async) === 'stop'" #stop routerLink="stop"
+      >Stop</a
+    >
+   
       <!-- <a
         [class.focus]="(selection$ | async) === 'about'"
         #about
         routerLink="about"
         >About</a
       > -->
-      <a  routerLink="three" >three_fingers</a>
-      <a  routerLink="four" >four_fingers</a>
+      <!-- <a  routerLink="three" >three_fingers</a>
+      <a  routerLink="four" >four_fingers</a> -->
       <!-- <a  routerLink="stop" >stop</a> -->
       <!-- <a  routerLink="down" >thumbs_down</a> -->
 
