@@ -1,0 +1,16 @@
+a {
+  display: block;
+  font-size: 2em;
+  padding: 10px;
+  margin: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: rgb(0, 0, 0);
+}
+a.focus {
+  background-color: #26c000;
+}
+
+img {
+  width: 50px;
+}
