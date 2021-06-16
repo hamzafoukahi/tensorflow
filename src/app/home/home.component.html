@@ -1,1 +1,15 @@
-<img src="/assets/1.png">
+<p class="text">Nos Frites</p>
+<div class="posit">
+  
+      <img [class.focus]="(selection$ | async) === 'stop1'"  src="/assets/mcdonalds/grande1.png">
+  
+
+      <img [class.focus]="(selection$ | async) === 'stop2'" src="/assets/mcdonalds/Moyenne1.png">
+  
+  
+      <img [class.focus]="(selection$ | async) === 'stop3'" src="/assets/mcdonalds/petite1.png">
+  
+</div>
+
+<router-outlet></router-outlet>
+

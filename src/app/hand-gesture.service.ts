@@ -109,8 +109,6 @@ export class HandGesture {
        {
          
         gesture = g.name;
-        console.log("/////////////")
-        console.log(gesture)
         // break;
       }
     }

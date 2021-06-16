@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild , ViewEncapsulation} from '@angular/core';
 import { Router } from '@angular/router';
 import { filter, map, withLatestFrom } from 'rxjs/operators';
 import { HandGesture } from './hand-gesture.service';
@@ -7,6 +7,8 @@ import { HandGesture } from './hand-gesture.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None
+
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('video') video: ElementRef<HTMLVideoElement>;
@@ -35,12 +37,12 @@ export class AppComponent implements AfterViewInit {
     if(value === 'three'){
       return 'three';
     }   
-    if(value === 'four'){
-      return 'four';
-    }   
-    if(value === 'stop'){
-      return 'stop';
-    }    
+    // if(value === 'four'){
+    //   return 'four';
+    // }   
+    // if(value === 'stop'){
+    //   return 'stop';
+    // }    
 		           }
 		)
 		);

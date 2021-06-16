@@ -1,0 +1,26 @@
+img {
+  padding: 10px;
+  margin: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+img.focus {
+  transform: scale(1.5);
+}
+
+img {
+  width: 200px;
+  position: relative;
+  left: 250px;
+  top: 380px;
+}
+
+p {
+  color: white;
+  font-family: "Arial", sans-serif;
+  font-size: 40px;
+  position: relative;
+  left: 600px;
+  top: 300px;
+}
